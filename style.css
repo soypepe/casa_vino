@@ -1,0 +1,635 @@
+/* Estilos comunes */
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  outline: none;
+  text-decoration: none;
+  list-style-type: none;
+  font-family: 'Cormorant Garamond', serif;
+}
+
+html{
+  font-size: 62.5%;
+}
+/* Estilos comunes final */
+
+.navbar{
+  position: fixed;
+  z-index: 100;
+  width: 100%;
+  top: 1rem;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.nav-lista{
+  display: flex;
+  justify-content: center;
+}
+
+.nav-link{
+  font-size: 1.5rem;
+  color: #fff;
+  width: 15rem;
+  margin: 0 3rem;
+  text-transform: uppercase;
+  border: .1rem solid #fff;
+  text-align: center;
+  padding: .2rem 0;
+  letter-spacing: .1rem;
+  position: relative;
+  overflow: hidden;
+}
+
+.nav-link::before{
+  content: '';
+  position: absolute;
+  width: 150%;
+  height: 5rem;
+  background-color: #d50000;
+  left: -20%;
+  transform: rotate(-40deg) translateX(-4rem);
+  transform-origin: left bottom;
+  opacity: .8;
+  transition: left .3s;
+}
+
+.nav-link:hover::before{
+  left: 110%;
+}
+
+.pagina-btn{
+  position: fixed;
+  z-index: 100;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: transparent;
+  border: none;
+}
+
+.pagina-btn img{
+  width: 4rem;
+  opacity: .4rem;
+  opacity: .4;
+  cursor: pointer;
+  transition: opacity .2s;
+}
+
+.pagina-btn img:hover{
+  opacity: 1;
+}
+
+.izq-btn{
+  left: 4rem;
+}
+
+.izq-btn img{
+  transform: rotate(-90deg);
+}
+
+.der-btn{
+  right: 4rem;
+}
+
+.der-btn img{
+  transform: rotate(90deg);
+}
+
+.progreso-wrapper{
+  position: fixed;
+  z-index: 100;
+  bottom: 2rem;
+  left: 3rem;
+}
+
+.progreso h2{
+  font-size: 2.5rem;
+  font-weight: 300;
+  color: #fff;
+}
+
+.circulo-wrapper{
+  display: flex;
+}
+
+.circulo{
+  width: 1rem;
+  height: 1rem;
+  border: .1rem solid #fff;
+  border-radius: 50%;
+  margin: 0 .3rem;
+  transition: background-color .3s;
+}
+
+.circulo-1{
+  background-color: #ddd;
+}
+
+.progreso{
+  margin: 1rem 0;
+  text-align: center;
+}
+
+.menu{
+  display: none;
+}
+
+.logo{
+  height: 6rem;
+}
+
+.wrapper{
+  width: 100vw;
+  height: 100vh;
+  position: relative;
+  overflow: hidden;
+}
+
+section{
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  left: 0;
+  overflow: hidden;
+  transition: left 1.5s;
+}
+
+.seccion-1{
+  z-index: 50;
+}
+
+.seccion-wrapper{
+  width: inherit;
+  height: inherit;
+  transform: scale(1.5);
+  transition: all 2s;
+}
+
+.seccion-1-wrapper{
+  background: linear-gradient(rgba(0,0,0,.5),rgba(0,0,0,.4)),
+  url(./images/section-1-bg.jpg) center no-repeat;
+  background-size: cover;
+}
+
+.seccion-1-header-wrapper{
+  position: absolute;
+  top: 70%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.seccion-1-header{
+  font-size: 10rem;
+  font-weight: 300;
+  color: #fff;
+  text-transform: capitalize;
+  letter-spacing: .1rem;
+  border-bottom: .2rem solid #d50000;
+  text-align: right;
+  user-select: none;
+}
+
+.seccion-2{
+  z-index: 40;
+}
+
+.seccion-2-wrapper{
+  background: linear-gradient(rgba(0,0,0,.8),rgba(0,0,0,.9)),
+  url(./images/section-2-bg.jpg) center no-repeat;
+  background-size: cover;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+.venta{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.venta-bolsa{
+  opacity: .9;
+  width: 45rem;
+}
+
+.venta-btn{
+  width: 20rem;
+  height: 5rem;
+  font-size: 2rem;
+  font-weight: 300;
+  text-transform: uppercase;
+  letter-spacing: .1rem;
+  background-color: transparent;
+  color: #fff;
+  margin-top: 4rem;
+  border: .1rem solid #fff;
+  transition: background-color .2s;
+}
+
+.venta-btn:hover{
+  background-color: #d50000;
+}
+
+.vino-botella{
+  opacity: .6;
+  width: 80rem;
+}
+
+.seccion-3{
+  z-index: 30;
+  background-color: #000;
+}
+
+.seccion-3-wrapper{
+  background: linear-gradient(rgba(0,0,0,.3),rgba(0,0,0,.9)),
+  url(./images/section-3-bg.jpg) center no-repeat;
+  background-size: cover;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.seccion-3-header{
+  font-size: 20rem;
+  color: #ccc;
+  text-transform: uppercase;
+  transform: rotate(-20deg);
+  text-align: center;
+  text-shadow: 0 .5rem 1.5rem #000;
+  user-select: none;
+}
+
+.marco-img{
+  width: 100rem;
+  position: absolute;
+  opacity: .5;
+}
+
+.uvas-img{
+  width: 40rem;
+  opacity: .7;
+  position: absolute;
+  transition: all 1.5s;
+}
+
+.uvas-img:hover{
+  opacity: 1;
+  transform: scale(2);
+}
+
+.seccion-4{
+  z-index: 20;
+}
+
+.seccion-4-wrapper{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.seccion-4-bg{
+  width: 110%;
+  height: 110%;
+  position: absolute;
+  background: linear-gradient(rgba(0,0,0,.9),rgba(0,0,0,.7)),
+  url(./images/section-4-bg.jpg) center no-repeat;
+  background-size: cover;
+  z-index: -10;
+  filter: blur(.5rem);
+}
+
+.seccion-4-header{
+  font-size: 10rem;
+  font-weight: 300;
+  text-align: center;
+  margin-bottom: 7rem;
+  color: #d50000;
+  user-select: none;
+}
+
+.nuevos-img{
+  width: 70rem;
+  border: .1rem solid #fff;
+  padding: 1rem;
+  opacity: .7;
+}
+
+.seccion-5{
+  z-index: 10;
+}
+
+.seccion-5-wrapper{
+  background: linear-gradient(rgba(0,0,0,.7),rgba(0,0,0,.5)),
+  url(./images/section-5-bg.jpg) center no-repeat;
+  background-size: cover;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.footer-lista li{
+  font-size: 2rem;
+  font-weight: 700;
+  letter-spacing: .1rem;
+  color: #ddd;
+  margin: 1rem 0;
+}
+
+.footer-lista li:first-child{
+  text-transform: uppercase;
+  color: #fff;
+}
+
+.footer-img{
+  width: 60rem;
+  margin: 0 20rem;
+  opacity: .9;
+}
+
+.copyright{
+  position: absolute;
+  bottom: 2rem;
+  font-size: 2rem;
+  font-weight: 600;
+  text-align: center;
+  color: #eee;
+  letter-spacing: .2rem;
+}
+
+/* Responsividad */
+@media (max-width:1600px) {
+  .venta-bolsa{
+    width: 35rem;
+  }
+
+  .vino-botella{
+    width: 65rem;
+  }
+
+  .footer-img{
+    width: 45rem;
+    margin: 0 12rem;
+  }
+}
+
+@media (max-width:1300px) {
+  .venta-bolsa{
+    width: 30rem;
+  }
+
+  .vino-botella{
+    width: 60rem;
+  }
+
+  .footer-img{
+    width: 35rem;
+    margin: 0 10rem;
+  }
+}
+
+@media (max-width:1200px) {
+  .nav-link{
+    margin: 0 1.5rem;
+  }
+
+  .seccion-1-header-wrapper{
+    width: 80%;
+  }
+
+  .seccion-1-header{
+    font-size: 8rem;
+  }
+
+  .venta-bolsa{
+    width: 25rem;
+  }
+
+  .venta-btn{
+    width: 15rem;
+    height: 4rem;
+    font-size: 1.7rem;
+  }
+
+  .vino-botella{
+    width: 50rem;
+  }
+
+  .footer-img{
+    width: 25rem;
+    margin: 0 7rem;
+  }
+}
+
+@media (max-width:1000px) {
+  .navbar{
+    justify-content: start;
+    padding-left: 2rem;
+  }
+
+  .menu{
+    display: block;
+    width: 4rem;
+    height: 2.5rem;
+    position: absolute;
+    top: 1rem;
+    right: 2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+
+  .menu-linea{
+    width: 100%;
+    height: .3rem;
+    background-color: #d50000;
+    transition: transform .5s;
+  }
+
+  .cambio .menu-linea-1{
+    transform: rotate(40deg) translate(.5rem, 1rem);
+  }
+
+  .cambio .menu-linea-2{
+    transform: translate(-.2rem,2rem);
+  }
+
+  .cambio .menu-linea-3{
+    transform: rotate(-40deg) translate(.5rem, -1rem);
+  }
+
+  .nav-lista{
+    position: absolute;
+    top: 5rem;
+    right: -21rem;
+    flex-direction: column;
+    height: calc(100vh - 5rem);
+    background-color: #333;
+    justify-content: start;
+    padding: 2rem;
+    border-radius: .5rem 0 0 0;
+    transition: right .5s;
+  }
+
+  .cambio .nav-lista{
+    right: 0;
+  }
+
+  .nav-link{
+    margin: 1rem;
+  }
+
+  .seccion-2-wrapper{
+    flex-direction: column;
+  }
+
+  .venta{
+    order: 1;
+  }
+
+  .seccion-3-header{
+    font-size: 12rem;
+  }
+
+  .marco-img{
+    width: 70rem;
+  }
+
+  .uvas-img{
+    width: 25rem;
+  }
+
+  .seccion-4-header{
+    font-size: 8rem;
+  }
+
+  .nuevos-img{
+    width: 60rem;
+  }
+
+  .seccion-5-wrapper{
+    flex-direction: column;
+  }
+
+  .footer-img{
+    width: 20rem;
+    order: 1;
+  }
+
+  .footer-lista{
+    width: 20rem;
+    margin: 2rem auto;
+  }
+}
+
+@media (max-width:800px) {
+  .izq-btn{
+    left: 2rem;
+  }
+
+  .der-btn{
+    right: 2rem;
+  }
+
+  .seccion-1-header{
+    font-size: 6rem;
+  }
+
+  .venta-bolsa{
+    width: 20rem;
+  }
+
+  .vino-botella{
+    width: 40rem;
+  }
+
+  .seccion-3-header{
+    font-size: 11rem;
+    opacity: .7;
+  }
+
+  .marco-img{
+    width: 60rem;
+  }
+
+  .nuevos-img{
+    width: 45rem;
+  }
+
+  .progreso-wrapper{
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+}
+
+@media (max-width:600px) {
+  .seccion-1-header{
+    font-size: 4rem;
+  }
+
+  .venta-bolsa{
+    width: 15rem;
+  }
+
+  .vino-botella{
+    width: 30rem;
+  }
+
+  .venta-btn{
+    width: 12rem;
+    height: 3rem;
+    font-size: 1.4rem;
+  }
+
+  .seccion-3-header{
+    font-size: 10rem;
+  }
+
+  .marco-img{
+    width: 35rem;
+  }
+
+  .seccion-4-header{
+    font-size: 6rem;
+  }
+
+  .nuevos-img{
+    width: 35rem;
+  }
+}
+
+@media (max-width:500px) {
+  html{
+    font-size: 45%;
+  }
+
+  .izq-btn{
+    left: .5rem;
+  }
+
+  .der-btn{
+    right: .5rem;
+  }
+
+  .nav-lista{
+    top: 6.5rem;
+  }
+
+  .seccion-3-header{
+    font-size: 8rem;
+  }
+
+  .uvas-img{
+    width: 15rem;
+  }
+
+  .uvas-img:hover{
+    width: 25rem;
+  }
+}
+/* Responsividad final */
